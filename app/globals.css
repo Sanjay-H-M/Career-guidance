@@ -1,0 +1,61 @@
+@import "tailwindcss";
+
+:root {
+  /* Theme CSS Variables - will be dynamically updated by ThemeProvider */
+  --color-background: #ffffff;
+  --color-foreground: #000000;
+  --color-primary: #003366;
+  --color-primary-hover: #002244;
+  --color-secondary: #f3f4f6;
+  --color-accent: #60a5fa;
+  --color-border: #e5e7eb;
+  --color-card-bg: #ffffff;
+  --color-input-bg: #ffffff;
+  --color-muted: #6b7280;
+}
+
+body {
+  background: var(--color-background);
+  color: var(--color-foreground);
+  font-family: Arial, Helvetica, sans-serif;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Theme-aware utility classes */
+.bg-theme-primary {
+  background-color: var(--color-primary);
+}
+
+.bg-theme-primary-hover:hover {
+  background-color: var(--color-primary-hover);
+}
+
+.bg-theme-secondary {
+  background-color: var(--color-secondary);
+}
+
+.bg-theme-card {
+  background-color: var(--color-card-bg);
+}
+
+.text-theme-primary {
+  color: var(--color-primary);
+}
+
+.text-theme-muted {
+  color: var(--color-muted);
+}
+
+.border-theme {
+  border-color: var(--color-border);
+}
+
+.bg-theme-input {
+  background-color: var(--color-input-bg);
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
